@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: javali-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:???
+    username: aaaa
+    password: aaaa
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+server:
+  port: 8099
+
+---
+spring:
+  config:
+      activate:
+        on-profile: dev
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+---
+spring:
+  config:
+      activate:
+        on-profile: prod
+  jpa:
+    show-sql: false
+    properties:
+      hibernate:
+        show_sql: false
+        format_sql: false

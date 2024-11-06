@@ -1,0 +1,7 @@
+services:
+  springboot-app:
+    build: .
+    image: javali-service-imagem
+    container_name: javali-service-container
+    ports:
+      - "8099:8099"
